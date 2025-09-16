@@ -102,7 +102,7 @@ export default function ProjectsSection() {
 
             {/* Tabs */}
             <div className="relative flex justify-center gap-10 mb-12 flex-wrap">
-                {["upcoming", "current"].map((tab) => (
+                {["upcoming", "trending"].map((tab) => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
@@ -189,7 +189,7 @@ export default function ProjectsSection() {
                         </motion.div>
                     ) : (
                         <motion.div
-                            key="current"
+                            key="trending"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}

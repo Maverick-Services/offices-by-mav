@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 const properties = [
     {
         title: "UAE",
-        count: 2,
+        location: "Dubai, Sharjah",
         image: "/uae.avif",
         featured: true,
     },
     {
         title: "India",
-        count: 3,
+        location: "Delhi NCR",
         image: "/india.webp",
         featured: true,
     },
-    {
-        title: "Australia",
-        count: 5,
-        image: "/australia.webp",
-        featured: true,
-    },
+    // {
+    //     title: "Australia",
+    //     count: 5,
+    //     image: "/australia.webp",
+    //     featured: true,
+    // },
     {
         title: "USA",
-        count: 3,
+        location: "California, New York",
         image: "/usa.webp",
         featured: true,
     },
@@ -67,12 +67,12 @@ export default function FeaturedProperties() {
                         viewport={{ once: true }}
                         className="text-gray-600 text-lg font-light max-w-2xl mx-auto"
                     >
-                        Premium real estate investments showcasing exceptional quality and strategic locations
+                        Premium investments showcasing exceptional quality and strategic locations
                     </motion.p>
                 </div>
 
                 {/* Properties Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     {properties.map((property, index) => (
                         <motion.div
                             key={index}
@@ -86,7 +86,7 @@ export default function FeaturedProperties() {
                             <div className="relative aspect-square overflow-hidden">
                                 <img
                                     src={property.image}
-                                    // alt={property.title}
+                                    alt={property.title}
                                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                                 />
 
@@ -95,32 +95,18 @@ export default function FeaturedProperties() {
 
                                 {/* Featured Badge */}
                                 {property.featured && (
-                                    <div className="absolute top-4 left-4 bg-white px-3 py-1 text-sm font-bold text-gray-900 tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="absolute top-4 left-4 bg-white px-3 py-1 text-sm font-bold text-gray-900 tracking-wide uppercase duration-300">
                                         {property?.title}
                                     </div>
                                 )}
                             </div>
 
-                            {/* Image Container */}
-                            {/* <div className="relative aspect-[4/5] overflow-hidden">
-                                <img
-                                    src={property.image} */}
-                            {/* // alt={property.title}
-                                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                                /> */}
-
-                            {/* Overlay Gradient */}
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
-
                             {/* Content */}
-                            {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                    <h3 className="text-xl font-semibold mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        {property.title}
-                                    </h3>
-                                    <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                                        {property.count} {property.count === 1 ? 'Unit' : 'Units'} Available
-                                    </p>
-                                </div> */}
+                            <div className="absolute bottom-1 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 className="text-xl font-semibold mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    {property.location}
+                                </h3>
+                            </div>
 
                             {/* Featured Badge */}
                             {/* {property.featured && (
@@ -135,13 +121,6 @@ export default function FeaturedProperties() {
                         </motion.div>
                     ))}
                 </div>
-
-                {/* View All Button */}
-                {/* <div className="text-center mt-16">
-                    <button className="border-2 border-gray-800 text-gray-800 px-8 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 hover:text-white transition-all duration-300">
-                        VIEW ALL PROPERTIES
-                    </button>
-                </div> */}
             </div>
         </section>
     );

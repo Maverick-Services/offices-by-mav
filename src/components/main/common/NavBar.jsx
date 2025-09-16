@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react"; // icons
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const pathName = usePathname();
@@ -39,16 +40,24 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex items-center justify-between px-6 md:px-10 py-4 md:py-6 bg-black text-white shadow-lg relative">
+    <header className="flex items-center justify-between px-6 md:px-10 py-4 md:py-4 bg-black text-white shadow-lg relative">
       {/* Logo */}
-      <motion.h1
-        className="text-lg md:text-xl font-bold tracking-wide"
+      <motion.div
+        className="flex items-center"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        OfficesByMav
-      </motion.h1>
+        <Image
+          src="/logo-white.png" // 🔥 replace with your actual logo file (SVG/PNG)
+          alt="OfficesByMav Logo"
+          width={120}
+          height={40}
+          className="object-contain"
+          priority
+        />
+      </motion.div>
+
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center space-x-8 relative">
