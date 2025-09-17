@@ -137,7 +137,7 @@ export default function CorporateTestimonials() {
                         viewport={{ once: true }}
                     />
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                        Trusted by real estate offices nationwide for professional solutions and growth support.
+                        Trusted nationwide for professional solutions and growth support.
                     </p>
                 </motion.div>
 

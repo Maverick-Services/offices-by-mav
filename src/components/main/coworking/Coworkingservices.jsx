@@ -36,7 +36,7 @@ export default function Coworkingservices() {
                     transition={{ duration: 0.7 }}
                     className="text-3xl md:text-5xl font-bold text-center text-white mb-12"
                 >
-                    Corporate Guest House Services
+                    Coworking Services
                 </motion.h2>
 
                 <div className="space-y-16">
