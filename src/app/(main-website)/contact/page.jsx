@@ -12,19 +12,19 @@ export default function ContactPage() {
                 <NavBar />
             </header>
 
-            {/* Hero Section */}
+            {/* Contct Form */}
             <div className="overflow-hidden">
-                <ContactHeroSection />
+                <ContactSection />
             </div>
+
+            {/* Hero Section */}
+            {/* <div className="overflow-hidden">
+                <ContactHeroSection />
+            </div> */}
 
             {/* Locations Section */}
             <div className="overflow-hidden">
                 <FeaturedProperties />
-            </div>
-
-            {/* Contct Form */}
-            <div className="overflow-hidden">
-                <ContactSection />
             </div>
 
             <Footer />

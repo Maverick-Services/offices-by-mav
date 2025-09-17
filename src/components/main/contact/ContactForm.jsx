@@ -34,7 +34,7 @@ export default function ContactForm() {
             });
 
             if (res.ok) {
-                setSuccess("✅ Message sent successfully!");
+                setSuccess("✅Thank you for your message. We will get in touch with you");
                 setFormData({
                     name: "",
                     companyName: "",

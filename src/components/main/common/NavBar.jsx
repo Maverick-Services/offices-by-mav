@@ -68,7 +68,7 @@ export default function Header() {
               href={item.href}
               ref={(el) => (refs.current[index] = el)}
               onClick={() => setActive(index)}
-              className={`relative text-sm font-medium transition-colors ${active === index ? "text-white" : "hover:text-gray-300"
+              className={`relative text-sm font-medium transition-colors ${active === index ? "text-white" : "hover:text-gray-300 capitalize"
                 }`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}

@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 export default function ContactSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-black via-gray-900 to-black text-white">
-            <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center w-full">
+            <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-12 items-center w-full">
                 {/* Left: Contact Info */}
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
@@ -19,7 +19,7 @@ export default function ContactSection() {
                     </h2>
                     <p className="text-lg text-gray-300 max-w-md">
                         Have questions or want to explore our services? Get in touch with us
-                        today — we’ll get back within 24 hours.
+                        today!
                     </p>
 
                     <div className="space-y-4">
