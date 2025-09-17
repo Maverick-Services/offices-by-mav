@@ -71,12 +71,12 @@ export default function CoworkingHeroSection() {
 
                 {/* CTA Button */}
                 <a
-                    href="/plans"
+                    href="/contact"
                     className="relative inline-block px-6 py-3 font-medium rounded-full text-white border border-white overflow-hidden group"
                 >
                     <span className="absolute inset-0 bg-gradient-to-r from-white to-gray-300 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
                     <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                        Explore Plans
+                        Explore Now
                     </span>
                 </a>
             </div>
