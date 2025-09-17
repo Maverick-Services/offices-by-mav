@@ -51,7 +51,7 @@ export default function Header() {
         <Image
           src="/logo-white.png" // 🔥 replace with your actual logo file (SVG/PNG)
           alt="OfficesByMav Logo"
-          width={120}
+          width={80}
           height={40}
           className="object-contain"
           priority
