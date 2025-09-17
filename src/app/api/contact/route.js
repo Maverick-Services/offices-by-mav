@@ -7,18 +7,18 @@ export async function POST(req) {
         const body = await req.json();
 
         await resend.emails.send({
-            from: 'info@officesbymav.com',
-            to: 'info@officesbymav.com',
-            subject: `New Contact Form Submission`,
+            from: 'onboarding@resend.dev',
+            to: 'officesbymav2023@gmail.com',
+            subject: `New Query ${body?.name ? "by " + body?.name : ""} from OffiesByMav Web`,
             html: `
         <h2>Contact Form Submission</h2>
-        <p><b>Name:</b> ${body.name}</p>
-        <p><b>Company:</b> ${body.company}</p>
-        <p><b>Email:</b> ${body.email}</p>
-        <p><b>Phone:</b> ${body.phone}</p>
-        <p><b>Alternate Phone:</b> ${body.altPhone}</p>
-        <p><b>State:</b> ${body.state}</p>
-        <p><b>City:</b> ${body.city}</p>
+        <p><b>Name:</b> ${body?.name}</p>
+        <p><b>Company:</b> ${body?.company}</p>
+        <p><b>Email:</b> ${body?.email}</p>
+        <p><b>Phone:</b> ${body?.phone}</p>
+        <p><b>Alternate Phone:</b> ${body?.altPhone}</p>
+        <p><b>State:</b> ${body?.state}</p>
+        <p><b>City:</b> ${body?.city}</p>
       `,
         });
 
