@@ -21,7 +21,7 @@ export default function Footer() {
                     <Image
                         src="/logo-white.png" // 🔥 replace with your logo file (white/transparent)
                         alt="OfficesByMav Logo"
-                        width={150}
+                        width={120}
                         height={50}
                         className="aspect-auto mb-4"
                     />
